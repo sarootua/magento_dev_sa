@@ -1,0 +1,26 @@
+<?php
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+
+// @codingStandardsIgnoreFile
+
+/** @var \Magento\Customer\Block\Form\Login $block */
+?>
+<div class="block block-customer-login">
+    <div class="block-title">
+        <strong id="block-customer-login-heading" role="heading" aria-level="2"><?= $block->escapeHtml(__('Registered Customers _ Customize login page')) ?></strong>
+    </div>
+
+    <div class="block-content" aria-labelledby="block-customer-login-heading">
+        <form class="form form-login"
+              action="<?= $block->escapeUrl($block->getPostActionUrl()) ?>"
+              method="post"
+              id="login-form"
+              data-mage-init='{"validation":{}}'>
+            <?= $block->getBlockHtml('formkey') ?>
+
+        </form>
+    </div>
+</div>
